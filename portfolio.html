@@ -1,149 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shubham | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Poppins', sans-serif; background:#0a0a23; color:#fff; scroll-behavior:smooth; }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Navbar */
-nav {
-    display:flex; justify-content:space-between; align-items:center; padding:20px 60px;
-    background:#13133a; box-shadow:0 4px 20px rgba(0,0,0,0.5); position:sticky; top:0; z-index:1000;
-}
-nav .logo { font-size:1.5rem; font-weight:700; color:#6c63ff; }
-nav a { margin:0 15px; text-decoration:none; color:#fff; font-weight:500; transition:0.3s; }
-nav a:hover { color:#ffd54f; transform:scale(1.05); }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a23;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
 
-/* Hero Section */
-.hero {
-    display:flex; flex-direction:column; justify-content:center; align-items:center;
-    height:90vh; text-align:center; background:linear-gradient(135deg,#1a1a40,#13133a);
-}
-.hero h1 { font-size:2.8rem; margin-bottom:15px; color:#fff; }
-.hero p { font-size:1.2rem; color:#ccc; }
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: #13133a;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-/* About Section */
-.about { max-width:900px; margin:60px auto; padding:40px; background:#12122f; border-radius:12px; text-align:center; }
-.about h2 { font-size:2rem; color:#6c63ff; margin-bottom:15px; }
-.about p { font-size:1.1rem; color:#ccc; line-height:1.8; }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #6c63ff;
+        }
 
-/* Projects Section */
-.projects { max-width:1100px; margin:80px auto; padding:0 20px; }
-.projects h2 { font-size:2.2rem; text-align:center; margin-bottom:50px; color:#6c63ff; }
-.card {
-    display:flex; flex-direction:column; background:#12122f; border-radius:12px; padding:20px;
-    margin-bottom:30px; box-shadow:0 5px 20px rgba(0,0,0,0.5); transition:0.3s;
-}
-.card:hover { transform:translateY(-5px); box-shadow:0 8px 30px rgba(108,99,255,0.5); }
-.card-title { font-size:1.5rem; color:#6c63ff; margin-bottom:12px; font-weight:600; }
-.card p { color:#ccc; font-size:1rem; }
-.btn {
-    display:inline-block; margin-top:15px; padding:10px 20px; background:#6c63ff;
-    color:#fff; border-radius:8px; font-weight:500; text-decoration:none; transition:0.3s;
-}
-.btn:hover { background:#5548e3; transform:scale(1.05); box-shadow:0 0 10px #6c63ff; }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-/* Skills Section */
-.skills { max-width:1100px; margin:80px auto; padding:40px 20px; text-align:center; }
-.skills h2 { font-size:2rem; color:#6c63ff; margin-bottom:25px; }
-.skill-box { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-.skill-item {
-    background:#12122f; padding:15px 25px; border-radius:8px; border:1px solid #6c63ff;
-    font-weight:500; color:#fff; transition:0.3s;
-}
-.skill-item:hover { transform:scale(1.05); }
+        nav a:hover {
+            color: #ffd54f;
+            transform: scale(1.05);
+        }
 
-/* Contact Section */
-.contact { max-width:900px; margin:80px auto; padding:40px; text-align:center; background:#12122f; border-radius:12px; box-shadow:0 5px 20px rgba(0,0,0,0.3); }
-.contact a { display:inline-block; margin:10px 15px; padding:12px 22px; background:#6c63ff; color:#fff; border-radius:8px; font-weight:500; text-decoration:none; transition:0.3s; }
-.contact a:hover { background:#5548e3; }
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a40, #13133a);
+        }
 
-/* Footer */
-footer { text-align:center; padding:25px 0; background:#14142d; color:#aaa; margin-top:50px; }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
 
-/* Responsive */
-@media(max-width:900px){
-    .hero h1{font-size:2.2rem;}
-    .hero p{font-size:1rem;}
-    .card{flex-direction:column;}
-}
-</style>
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background: #12122f;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            color: #6c63ff;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        /* Projects Section */
+        .projects {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .projects h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #6c63ff;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            background: #12122f;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(108, 99, 255, 0.5);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #6c63ff;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #ccc;
+            font-size: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #6c63ff;
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #5548e3;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #6c63ff;
+        }
+
+        /* Skills Section */
+        .skills {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2rem;
+            color: #6c63ff;
+            margin-bottom: 25px;
+        }
+
+        .skill-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill-item {
+            background: #12122f;
+            padding: 15px 25px;
+            border-radius: 8px;
+            border: 1px solid #6c63ff;
+            font-weight: 500;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 40px;
+            text-align: center;
+            background: #12122f;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact a {
+            display: inline-block;
+            margin: 10px 15px;
+            padding: 12px 22px;
+            background: #6c63ff;
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            background: #5548e3;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            background: #14142d;
+            color: #aaa;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media(max-width:900px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .card {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<nav>
-    <div class="logo">Shubham</div>
-    <div>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+    <nav>
+        <div class="logo">Shubham</div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <h1>Hi, I'm Shubham</h1>
+        <p>B.Tech Student | Aspiring Developer | Building Modern Web Projects</p>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>I am a B.Tech student passionate about programming and web development.
+            I focus on building practical projects to improve my skills.
+            You can explore my work on GitHub below.</p>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <h2>Featured Projects</h2>
+
+        <div class="card">
+            <div class="card-title">Amazon Clone</div>
+            <p>A fully responsive Amazon UI clone for practicing frontend and backend integration.</p>
+            <a href="https://github.com/shubham-nov06/Amazon-Clone" target="_blank" class="btn">View Repo</a>
+        </div>
+
+        <div class="card">
+            <div class="card-title">College Website</div>
+            <p>Multi-page responsive college website project for learning layouts and design.</p>
+            <a href="https://github.com/shubham-nov06/College-Website" target="_blank" class="btn">View Repo</a>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+        <div class="skill-box">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">Git & GitHub</div>
+            <div class="skill-item">Responsive Design</div>
+            <div class="skill-item">UI / UX Basics</div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <a href="mailto:contactshubhamhere@gmail.com">Email Me</a>
+        <a href="https://www.linkedin.com/in/shubham-nov06" target="_blank">LinkedIn</a>
         <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
-    </div>
-</nav>
+    </section>
 
-<!-- Hero -->
-<section class="hero" id="home">
-    <h1>Hi, I'm Shubham</h1>
-    <p>B.Tech Student | Aspiring Developer | Building Modern Web Projects</p>
-</section>
-
-<!-- About -->
-<section class="about" id="about">
-    <h2>About Me</h2>
-    <p>I am a B.Tech student passionate about programming and web development.  
-    I focus on building practical projects to improve my skills.  
-    You can explore my work on GitHub below.</p>
-</section>
-
-<!-- Projects -->
-<section class="projects" id="projects">
-    <h2>Featured Projects</h2>
-
-    <div class="card">
-        <div class="card-title">Amazon Clone</div>
-        <p>A fully responsive Amazon UI clone for practicing frontend and backend integration.</p>
-        <a href="https://github.com/shubham-nov06/Amazon-Clone" target="_blank" class="btn">View Repo</a>
-    </div>
-
-    <div class="card">
-        <div class="card-title">College Website</div>
-        <p>Multi-page responsive college website project for learning layouts and design.</p>
-        <a href="https://github.com/shubham-nov06/College-Website" target="_blank" class="btn">View Repo</a>
-    </div>
-</section>
-
-<!-- Skills -->
-<section class="skills" id="skills">
-    <h2>My Skills</h2>
-    <div class="skill-box">
-        <div class="skill-item">HTML</div>
-        <div class="skill-item">CSS</div>
-        <div class="skill-item">JavaScript</div>
-        <div class="skill-item">Git & GitHub</div>
-        <div class="skill-item">Responsive Design</div>
-        <div class="skill-item">UI / UX Basics</div>
-    </div>
-</section>
-
-<!-- Contact -->
-<section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <a href="mailto:contactshubhamhere@gmail.com">Email Me</a>
-    <a href="https://www.linkedin.com/in/shubham-nov06" target="_blank">LinkedIn</a>
-    <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
-</section>
-
-<footer>
-    © 2025 Shubham | All Rights Reserved
-</footer>
+    <footer>
+        © 2025 Shubham | All Rights Reserved
+    </footer>
 
 </body>
+
 </html>
